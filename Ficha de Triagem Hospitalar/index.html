@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    
+</head>
+<body>
+    <div class="container">
+        <h2>Ficha de Triagem Hospitalar</h2>
+        <form action="ficha.php" method="post">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <label for="">Nome: </label>
+                <input type="text" name="nome">
+
+                <label for="">Idade: </label>
+                <input type="number" name="idade" required>
+
+                 <label for="">Sexo: </label>
+                 <select name="sexo" id="">
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Outros">Outros</option>
+                 </select>
+                 <label for="">Data de Nascimento: </label>
+                 <input type="date" name="data_nascimento">
+                 <label for="">CPF: </label>
+                 <input type="text" name="cpf" required>
+                 <label for="">Telefone: </label>
+                 <input type="text" name="telefone" required> 
+                 <label for="">Endereço: </label>
+                 <input type="text" name="endereco">
+            </fieldset>
+            <fieldset>
+                <legend>Informações Médicas</legend>
+                <label for="">Sintomas: </label>
+                <input type="text" name="sintomas">
+                <label for="">Inicio dos sintomas: </label>
+                <input type="date" name="iniciosintomas">
+                <label for="">Doenças pré-existentes: </label>
+                <input type="text" name="doencasexistentes">
+                <label for="">Uso de medicamentos: </label>
+                <input type="text" name="medicamentos">
+                <label for="">Alergia: </label>
+                <input type="text" name="alergia">
+            </fieldset>
+            <fieldset>
+                <legend>Dados Vitais</legend>
+                <label for="">Pressão arterial: </label>
+                <input type="text" name="pressaoarterial">
+                <label for="">Temperatura (°C)</label>
+                <input type="text" name="temperatura">
+                <label for="">Frequência cardiaca (bpm): </label>
+                <input type="text" name="bpm">
+                <label for="">Saturação de O² (%):</label>
+                <input type="text" name="saturacaoO2">
+            </fieldset>
+            <fieldset>
+                <legend>Observações</legend>
+                <input type="text" name="observacoes">
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
