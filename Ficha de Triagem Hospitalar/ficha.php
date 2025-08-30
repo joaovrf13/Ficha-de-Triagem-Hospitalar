@@ -23,17 +23,6 @@ $Observacoes = $_POST["observacoes"];
 $sql = "INSERT INTO pacientes(nome, idade, cpf, sexo, data_nascimento, telefone, endereco, sintomas, iniciosintomas, doencasexistentes, medicamentos, alergia, pressaoarterial, temperatura, bpm, saturacaoO2, observacoes) 
 VALUES('$Nome', '$Idade', '$Cpf', '$Sexo', '$Data_Nascimento', '$Telefone', '$Endereco', '$Sintomas', '$InicioSintomas', '$DoencasExistentes', '$Medicamentos', '$Alergia', '$PressaoArterial', '$Temperatura', '$BPM', '$SaturacaoO2', '$Observacoes')";
 
-
-//$InserirPaciente = $conexao->prepare("INSERT INTO triagemDB(id, nome, idade, cpf, sexo, data_nascimento, telefone, endereco, sintomas, iniciosintomas, doencasexistentes, medicamentos, alergia, pressaoarterial, temperatura, bpm, saturacaoO2, observacoes) VALUES (:nome, :idade, :cpf, :sexo, :data_nascimento, :telefone, :endereco, :sintomas, :iniciosintomas, :doencasexistentes, :medicamentos, :alergia, :pressaoarterial, :temperatura, :bpm, :saturacaoO2, :observacoes)");
-
-/*if ($InserirPaciente->execute()){
-    echo"Paciente inserido com sucesso!";
-}else{
-    echo "Erro ao inserir paciente: " . $InserirPaciente->error;
-}
-
-$InserirPaciente->close();
-$conexao->close();*/
 ?>
 
 <!DOCTYPE html>
@@ -76,4 +65,5 @@ $conexao->close();*/
 
     </div>
 </body>
+
 </html>
