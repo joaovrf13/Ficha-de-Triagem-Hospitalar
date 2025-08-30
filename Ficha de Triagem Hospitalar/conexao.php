@@ -3,7 +3,7 @@
 $host = 'localhost';
 $DBname = 'triagemDB';
 $username = 'root';
-$password = 'aluno';
+$password = 'Joao2025*'; //trocar depois para aluno
 
 $conexao = new mysqli($host, $username, $password,$DBname);
 //para criar uma conexao com o banco usamos o mysqli 

@@ -20,7 +20,8 @@ $BPM = $_POST["bpm"];
 $SaturacaoO2 = $_POST["saturacaoO2"];
 $Observacoes = $_POST["observacoes"];
 
-$sql = "INSERT INTO triagemDB(nome, idade, cpf, sexo, data_nascimento, telefone, endereco, sintomas, inciosintomas, doencasexistentes, medicamentos, alergia, pressaoarterial, temperatura, bpm, saturacaoO2, observacoes) VALUES('$Nome', '$Idade', '$Cpf','$Sexo', '$$Data_Nascimento', '$$Telefone', '$Endereco', '$$Sintomas', '$$InicioSintomas', '$DoencasExistentes', '$$Medicamentos', '$$Alergia', '$$PressaoArterial', '$$Temperatura', '$$BPM', '$SaturacaoO2', '$$Observacoes')";
+$sql = "INSERT INTO pacientes(nome, idade, cpf, sexo, data_nascimento, telefone, endereco, sintomas, iniciosintomas, doencasexistentes, medicamentos, alergia, pressaoarterial, temperatura, bpm, saturacaoO2, observacoes) 
+VALUES('$Nome', '$Idade', '$Cpf', '$Sexo', '$Data_Nascimento', '$Telefone', '$Endereco', '$Sintomas', '$InicioSintomas', '$DoencasExistentes', '$Medicamentos', '$Alergia', '$PressaoArterial', '$Temperatura', '$BPM', '$SaturacaoO2', '$Observacoes')";
 
 
 //$InserirPaciente = $conexao->prepare("INSERT INTO triagemDB(id, nome, idade, cpf, sexo, data_nascimento, telefone, endereco, sintomas, iniciosintomas, doencasexistentes, medicamentos, alergia, pressaoarterial, temperatura, bpm, saturacaoO2, observacoes) VALUES (:nome, :idade, :cpf, :sexo, :data_nascimento, :telefone, :endereco, :sintomas, :iniciosintomas, :doencasexistentes, :medicamentos, :alergia, :pressaoarterial, :temperatura, :bpm, :saturacaoO2, :observacoes)");
@@ -45,10 +46,10 @@ $conexao->close();*/
 <body>
     <div class = "container">
         <?php 
-            if($conexao -> query($sql == TRUE)){
+            if(($conexao) -> query($sql) === TRUE){
                 echo "<h2>Paciente Cadastrado com Sucesso!</
                 h2>";
-                echo"<div>class='paciente'</div>";
+                echo"<divclass='paciente'></div>";
                 echo "<b>Nome: </b> $Nome <br>";
                 echo "<b>Idade: <b> $Idade <br>";
                 echo "<b>Sexo: <b> $Sexo<br>";
@@ -68,7 +69,7 @@ $conexao->close();*/
                 echo "<b>Observações: <b> $Observacoes<br>";
             }
             else{
-                    echo "<p> Erro ao cadastrar Paciente" . $conexao->error . "</p>" ;
+                    echo "<p>Erro ao cadastrar Paciente: " . $conexao->error . "</p>" ;
             }
             $conexao -> close();
         ?>
